@@ -20,7 +20,7 @@ const PROJECTS = [
       "A clean, versatile logo mark crafted to capture the essence of the brand — timeless, bold, and immediately recognisable. Delivered across all required formats and size variants.",
     tools: ["Adobe Illustrator", "Brand Strategy", "Typography"],
     bgClass: "branding-1",
-    image: "img/l15.jpeg",
+    image: "design_portfolio/img/l15.jpeg",
   },
   {
     title: "Brand Mark II",

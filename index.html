@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>The Design Museum — Sp Designs</title>
+    <meta name="description" content="A curated digital museum showcasing the graphic design work of Sp Designs — branding, UI, posters, and visual storytelling." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="The Design Museum — Sp Designs" />
+    <meta property="og:description" content="A curated digital museum showcasing the graphic design work of Sp Designs." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Design Museum — Sp Designs" />
+    <meta name="twitter:description" content="A curated digital museum showcasing the graphic design work of Sp Designs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="museum.css" />
+  </head>
+  <body class="dark-mode">
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="spotlight" class="spotlight"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-doors">
+          <div class="door door-left"></div>
+          <div class="door door-right"></div>
+        </div>
+        <div class="loading-text-wrap">
+          <div class="loading-logo">✦</div>
+          <p class="loading-label">THE DESIGN MUSEUM</p>
+          <h2 class="loading-title">Opening Exhibition...</h2>
+          <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar"></div></div>
+          <p class="loading-sub" id="loading-sub">Curating masterpieces...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <div class="nav-logo">
+        <span class="nav-logo-symbol">✦</span>
+        <span class="nav-logo-text">Design Museum - Sp Designs</span>
+      </div>
+      <div class="nav-floor-map">
+        <a href="#entrance" class="nav-link" data-label="Entrance">01</a>
+        <a href="#about" class="nav-link" data-label="About">02</a>
+        <a href="#exhibitions" class="nav-link" data-label="Exhibitions">03</a>
+        <a href="#archive" class="nav-link" data-label="Archive">04</a>
+        <a href="#skills" class="nav-link" data-label="Skills">05</a>
+        <a href="#testimonials" class="nav-link" data-label="Testimonials">06</a>
+        <a href="#contact" class="nav-link" data-label="Contact">07</a>
+      </div>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon-dark">☽</span>
+          <span class="theme-icon-light">☀</span>
+        </button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <button id="mobile-close" class="mobile-close">✕</button>
+      <nav class="mobile-nav">
+        <a href="#entrance" class="mobile-link">Entrance Hall</a>
+        <a href="#about" class="mobile-link">About the Artist</a>
+        <a href="#exhibitions" class="mobile-link">Exhibitions</a>
+        <a href="#archive" class="mobile-link">Archive Gallery</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#contact" class="mobile-link">Contact Room</a>
+      </nav>
+    </div>
+
+    <!-- ENTRANCE HALL (Hero) -->
+    <section id="entrance" class="section hero-section">
+      <canvas id="particle-canvas" class="particle-canvas"></canvas>
+      <div class="hero-spotlights">
+        <div class="hero-spotlight s1"></div>
+        <div class="hero-spotlight s2"></div>
+        <div class="hero-spotlight s3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">
+          <span class="eyebrow-line"></span>
+          <span>Gallery Est. 2020</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h1 class="hero-title reveal">
+          <span class="hero-title-line">Welcome to</span>
+          <span class="hero-title-line hero-title-accent">The Design</span>
+          <span class="hero-title-line">Museum</span>
+        </h1>
+        <p class="hero-subtitle reveal">A curated collection of creativity, branding, and visual storytelling.</p>
+        <div class="hero-cta reveal">
+          <a href="#about" class="btn-primary">
+            <span>Enter Gallery</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#archive" class="btn-ghost">View Archive</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider">|</div>
+          <div class="stat-item">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-divider">|</div>
+          <div class="stat-item">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Clients</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-text">Scroll to Explore</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- ABOUT THE ARTIST -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 02</span>
+          <span class="room-title">About the Artist</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-plaque reveal">
+            <div class="plaque-border">
+              <div class="plaque-inner">
+                <div class="plaque-header">
+                  <span class="plaque-symbol">✦</span>
+                  <span class="plaque-museum-label">Design Museum • Artist Plaque</span>
+                </div>
+                <h2 class="plaque-name">Sp Designs</h2>
+                <p class="plaque-title">Graphic Designer & Visual Storyteller</p>
+                <div class="plaque-divider"></div>
+                <p class="plaque-bio">
+                  With over 4 years of immersive design experience, Sp Designs transforms concepts into compelling visual narratives. Specialising in brand identity, digital design, and visual communication, her work bridges the gap between art and strategy — creating designs that don't just look beautiful, but speak volumes.
+                </p>
+                <div class="plaque-divider"></div>
+                <div class="plaque-meta">
+                  <div class="plaque-meta-item">
+                    <span class="meta-key">Location</span>
+                    <span class="meta-val">Nigeria</span>
+                  </div>
+                  <div class="plaque-meta-item">
+                    <span class="meta-key">Available For</span>
+                    <span class="meta-val">Freelance & Collaborations</span>
+                  </div>
+                  <div class="plaque-meta-item">
+                    <span class="meta-key">Philosophy</span>
+                    <span class="meta-val">"Design is not just what it looks like — it's how it makes you feel."</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <div class="timeline reveal">
+              <h3 class="timeline-heading">Design Journey</h3>
+              <div class="timeline-items">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year">2020</span>
+                    <h4>The Beginning</h4>
+                    <p>Discovered a passion for graphic design and began self-learning Adobe Creative Suite and the principles of visual communication.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year">2021</span>
+                    <h4>First Clients</h4>
+                    <p>Built first brand identities for local businesses. Expanded into social media design and digital marketing creatives.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year">2022</span>
+                    <h4>UI/UX Exploration</h4>
+                    <p>Ventured into UI design and Figma, creating app interfaces and web prototypes with a focus on user experience.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year">2023</span>
+                    <h4>International Reach</h4>
+                    <p>Worked with international clients on premium branding campaigns, poster designs, and multi-platform digital strategies.</p>
+                  </div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year">2024–Present</span>
+                    <h4>The Design Museum Opens</h4>
+                    <p>Curating a growing collection of award-worthy work — pushing creative boundaries across all design disciplines.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXHIBITION ROOMS -->
+    <section id="exhibitions" class="section exhibitions-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 03</span>
+          <span class="room-title">Exhibition Rooms</span>
+        </div>
+        <p class="section-subtitle reveal">Step through each gallery room and experience design as art.</p>
+
+        <!-- Logo Gallery -->
+        <div class="exhibition-room reveal" id="room-branding">
+          <div class="room-header">
+            <div class="room-tag">Gallery I</div>
+            <h3 class="room-name">Logo Gallery</h3>
+            <p class="room-desc">Brand marks, wordmarks, and symbol systems — the visual face of every great brand.</p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-frame" data-project="0">
+              <div class="frame-inner">
+                <div class="project-artwork branding-1"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Mark I</h4>
+                  <p class="project-cat">Logo Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="1">
+              <div class="frame-inner">
+                <div class="project-artwork branding-2"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Mark II</h4>
+                  <p class="project-cat">Logo Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="2">
+              <div class="frame-inner">
+                <div class="project-artwork branding-3"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Mark III</h4>
+                  <p class="project-cat">Logo Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Branding Room -->
+        <div class="exhibition-room reveal" id="room-poster">
+          <div class="room-header">
+            <div class="room-tag">Gallery II</div>
+            <h3 class="room-name">Branding Room</h3>
+            <p class="room-desc">Complete brand identity systems — colour, typography, and visual language working in harmony.</p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-frame" data-project="3">
+              <div class="frame-inner">
+                <div class="project-artwork poster-1"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Identity I</h4>
+                  <p class="project-cat">Brand Identity</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="4">
+              <div class="frame-inner">
+                <div class="project-artwork poster-2"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Identity II</h4>
+                  <p class="project-cat">Brand Identity</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="5">
+              <div class="frame-inner">
+                <div class="project-artwork poster-3"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Brand Identity III</h4>
+                  <p class="project-cat">Brand Identity</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flyer Room -->
+        <div class="exhibition-room reveal" id="room-ui">
+          <div class="room-header">
+            <div class="room-tag">Gallery III</div>
+            <h3 class="room-name">Flyer Room</h3>
+            <p class="room-desc">Event flyers and promotional designs crafted to command attention and drive action.</p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-frame" data-project="6">
+              <div class="frame-inner">
+                <div class="project-artwork ui-1"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Event Flyer I</h4>
+                  <p class="project-cat">Flyer Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="7">
+              <div class="frame-inner">
+                <div class="project-artwork ui-2"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Event Flyer II</h4>
+                  <p class="project-cat">Flyer Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="8">
+              <div class="frame-inner">
+                <div class="project-artwork ui-3"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Event Flyer III</h4>
+                  <p class="project-cat">Flyer Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publications Room -->
+        <div class="exhibition-room reveal" id="room-creative">
+          <div class="room-header">
+            <div class="room-tag">Gallery IV</div>
+            <h3 class="room-name">Publications Room</h3>
+            <p class="room-desc">Book covers and editorial designs that tell a story before the first page is turned.</p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-frame" data-project="9">
+              <div class="frame-inner">
+                <div class="project-artwork creative-1"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Book Cover I</h4>
+                  <p class="project-cat">Publication Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="10">
+              <div class="frame-inner">
+                <div class="project-artwork creative-2"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Book Cover II</h4>
+                  <p class="project-cat">Publication Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+            <div class="project-frame" data-project="11">
+              <div class="frame-inner">
+                <div class="project-artwork creative-3"></div>
+                <div class="project-info">
+                  <h4 class="project-title">Book Cover III</h4>
+                  <p class="project-cat">Publication Design</p>
+                </div>
+                <div class="frame-hover"><span class="view-text">View Exhibition →</span></div>
+              </div>
+              <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVE GALLERY (Masonry) -->
+    <section id="archive" class="section archive-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 04</span>
+          <span class="room-title">Archive Gallery</span>
+        </div>
+        <p class="section-subtitle reveal">The complete collection — filtered by discipline.</p>
+        <div class="archive-filters reveal">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="branding">Logos & Branding</button>
+          <button class="filter-btn" data-filter="posters">Flyers</button>
+          <button class="filter-btn" data-filter="publications">Publications</button>
+          <button class="filter-btn" data-filter="illustrations">Artwork</button>
+        </div>
+        <!-- Masonry grid is built dynamically by museum.js from GALLERY_ALL -->
+        <div class="masonry-grid" id="masonry-grid"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS SHOWCASE -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 05</span>
+          <span class="room-title">Skills Showcase</span>
+        </div>
+        <p class="section-subtitle reveal">Museum artifacts — the tools of creation.</p>
+        <div class="skills-grid">
+          <div class="skill-artifact reveal" data-delay="0">
+            <div class="artifact-case">
+              <div class="artifact-icon ps-icon">
+                <span>Ps</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Adobe Photoshop</h4>
+              <p class="artifact-type">Photo Editing & Retouching</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="92"></div>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="100">
+            <div class="artifact-case">
+              <div class="artifact-icon ai-icon">
+                <span>Ai</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Adobe Illustrator</h4>
+              <p class="artifact-type">Vector Design & Illustration</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="200">
+            <div class="artifact-case">
+              <div class="artifact-icon fig-icon">
+                <span>Fg</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Figma</h4>
+              <p class="artifact-type">UI/UX Design & Prototyping</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="300">
+            <div class="artifact-case">
+              <div class="artifact-icon canva-icon">
+                <span>Cv</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Canva Pro</h4>
+              <p class="artifact-type">Social Media & Quick Creatives</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="400">
+            <div class="artifact-case">
+              <div class="artifact-icon brand-icon">
+                <span>Br</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Branding</h4>
+              <p class="artifact-type">Identity Systems & Strategy</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="500">
+            <div class="artifact-case">
+              <div class="artifact-icon social-icon">
+                <span>Sm</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">Social Media Design</h4>
+              <p class="artifact-type">Digital Creatives & Campaigns</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="94"></div>
+              </div>
+              <span class="skill-pct">94%</span>
+            </div>
+          </div>
+          <div class="skill-artifact reveal" data-delay="600">
+            <div class="artifact-case">
+              <div class="artifact-icon ui-skill-icon">
+                <span>UI</span>
+              </div>
+              <div class="artifact-glass"></div>
+            </div>
+            <div class="artifact-info">
+              <h4 class="artifact-name">UI Design</h4>
+              <p class="artifact-type">Interface & User Experience</p>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+              <span class="skill-pct">82%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS WALL -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 06</span>
+          <span class="room-title">Testimonials Wall</span>
+        </div>
+        <p class="section-subtitle reveal">Words from those who've visited the studio.</p>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="test-quote-mark">"</div>
+            <p class="test-text">Rejoice transformed our entire brand identity. The work wasn't just beautiful — it told our story in ways we couldn't articulate ourselves. Truly exceptional.</p>
+            <div class="test-footer">
+              <div class="test-avatar" style="background: linear-gradient(135deg, #c9a84c, #e5c97b);">AI</div>
+              <div class="test-meta">
+                <strong>Amara Ibe</strong>
+                <span>CEO, Velour Collective</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal" data-delay="100">
+            <div class="test-quote-mark">"</div>
+            <p class="test-text">The social media designs she created increased our engagement by 300%. She has an uncanny ability to combine strategy with stunning visuals. A rare talent.</p>
+            <div class="test-footer">
+              <div class="test-avatar" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">KO</div>
+              <div class="test-meta">
+                <strong>Kelechi Okafor</strong>
+                <span>Marketing Director, PulseMedia</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal" data-delay="200">
+            <div class="test-quote-mark">"</div>
+            <p class="test-text">Our app UI went from confusing to intuitive overnight thanks to Rejoice. She doesn't just design — she thinks through every user interaction with empathy and precision.</p>
+            <div class="test-footer">
+              <div class="test-avatar" style="background: linear-gradient(135deg, #0ea5e9, #38bdf8);">TN</div>
+              <div class="test-meta">
+                <strong>Taiwo Nwosu</strong>
+                <span>Founder, Luma Health</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal" data-delay="300">
+            <div class="test-quote-mark">"</div>
+            <p class="test-text">Working with Rejoice was seamless. She understood our luxury brand vision immediately and delivered packaging designs that left our clients speechless. Absolute class.</p>
+            <div class="test-footer">
+              <div class="test-avatar" style="background: linear-gradient(135deg, #d97706, #fbbf24);">SC</div>
+              <div class="test-meta">
+                <strong>Sophia Chen</strong>
+                <span>Brand Manager, Aura Skincare</span>
+              </div>
+              <div class="test-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ROOM -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-eyebrow reveal">
+          <span class="room-number">Room 07</span>
+          <span class="room-title">Contact Room</span>
+        </div>
+        <p class="section-subtitle reveal">Leave a message at the visitor's desk — let's create something extraordinary.</p>
+        <div class="contact-grid">
+          <div class="contact-desk reveal">
+            <h3 class="desk-title">Visitor Feedback Desk</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="visitor-name">Your Name</label>
+                <input type="text" id="visitor-name" name="name" class="form-input" placeholder="Enter your full name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="visitor-email">Email Address</label>
+                <input type="email" id="visitor-email" name="email" class="form-input" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="visitor-subject">Subject</label>
+                <input type="text" id="visitor-subject" name="subject" class="form-input" placeholder="Project inquiry, collaboration..." />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="visitor-message">Your Message</label>
+                <textarea id="visitor-message" name="message" class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary submit-btn">
+                <span>Send Message</span>
+                <span class="btn-arrow">→</span>
+              </button>
+              <div id="form-success" class="form-success" style="display:none">
+                ✦ Thank you! Your message has been received.
+              </div>
+            </form>
+          </div>
+          <div class="contact-info reveal" data-delay="200">
+            <div class="info-card">
+              <h3 class="info-title">Find the Artist</h3>
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="info-icon">✉</div>
+                  <div class="info-content">
+                    <span class="info-label">Email</span>
+                    <a href="mailto:rejoiceambrose54@gmail.com" class="info-value">rejoiceambrose54@gmail.com</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">✆</div>
+                  <div class="info-content">
+                    <span class="info-label">Phone</span>
+                    <a href="tel:+2348065664487" class="info-value">+234 8065664487</a>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">◎</div>
+                  <div class="info-content">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">Nigeria, West Africa</span>
+                  </div>
+                </div>
+              </div>
+              <div class="social-links">
+                <span class="social-label">Follow the Museum</span>
+                <div class="social-row">
+                  <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+                  <a href="#" class="social-btn" aria-label="LinkedIn">LN</a>
+                  <a href="#" class="social-btn" aria-label="Behance">Be</a>
+                  <a href="#" class="social-btn" aria-label="Dribbble">Dr</a>
+                  <a href="#" class="social-btn" aria-label="Twitter">X</a>
+                </div>
+              </div>
+              <a href="#" class="btn-primary cv-btn">
+                <span>Download CV</span>
+                <span class="btn-arrow">↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-symbol">✦</span>
+          <h3 class="footer-name">The Design Museum</h3>
+          <p class="footer-tagline">Sp Designs — Graphic Designer</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#entrance">Entrance Hall</a>
+          <a href="#about">About</a>
+          <a href="#exhibitions">Exhibitions</a>
+          <a href="#archive">Archive</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/sp-enter" class="footer-social-link">Github</a>
+          <a href="#" class="footer-social-link">LinkedIn</a>
+          
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Sp Designs · The Design Museum · All Exhibitions Reserved</p>
+        <p class="footer-made">Designed with ✦ and intention</p>
+      </div>
+    </footer>
+
+    <!-- PROJECT LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+      <div class="lightbox-overlay" id="lightbox-overlay"></div>
+      <div class="lightbox-panel">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+        <div class="lightbox-content">
+          <div class="lightbox-artwork" id="lightbox-artwork"></div>
+          <div class="lightbox-details">
+            <span class="lightbox-category" id="lightbox-category"></span>
+            <h2 class="lightbox-title" id="lightbox-title"></h2>
+            <p class="lightbox-desc" id="lightbox-desc"></p>
+            <div class="lightbox-tools">
+              <span class="tools-label">Tools Used</span>
+              <div class="tools-list" id="lightbox-tools"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="museum.js"></script>
+  </body>
+</html>

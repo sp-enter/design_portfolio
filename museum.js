@@ -20,7 +20,7 @@ const PROJECTS = [
       "A clean, versatile logo mark crafted to capture the essence of the brand — timeless, bold, and immediately recognisable. Delivered across all required formats and size variants.",
     tools: ["Adobe Illustrator", "Brand Strategy", "Typography"],
     bgClass: "branding-1",
-    image: "/img/l15.jpeg",
+    image: "img/l15.jpeg",
   },
   {
     title: "Brand Mark II",
@@ -29,7 +29,7 @@ const PROJECTS = [
       "A distinctive logo identity with a strong typographic foundation. Designed for multi-platform use across digital and print, ensuring consistency at every touchpoint.",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Mockup Design"],
     bgClass: "branding-2",
-    image: "/img/l10.png",
+    image: "img/l10.png",
   },
   {
     title: "Brand Mark III",
@@ -38,7 +38,7 @@ const PROJECTS = [
       "A symbol-forward logo concept balancing visual simplicity with deeper meaning. The mark works independently and alongside the wordmark for maximum flexibility.",
     tools: ["Adobe Illustrator", "Vector Art", "Brand Guidelines"],
     bgClass: "branding-3",
-    image: "/img/l11.png",
+    image: "img/l11.png",
   },
   // Gallery II — Branding Room (indices 3-5)
   {
@@ -48,7 +48,7 @@ const PROJECTS = [
       "A full brand identity system — encompassing logo, colour palette, typography, stationery, and brand guidelines. Designed to communicate purpose and personality at every level.",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Brand Strategy"],
     bgClass: "branding-1",
-    image: "/img/b1.png",
+    image: "img/b1.png",
   },
   {
     title: "Brand Identity II",
@@ -57,7 +57,7 @@ const PROJECTS = [
       "A premium brand identity built for a business with bold ambitions. The system balances structure with creativity — professional, memorable, and built to last.",
     tools: ["Adobe Illustrator", "Figma", "Brand Guidelines"],
     bgClass: "branding-2",
-    image: "/img/b2.png",
+    image: "img/b2.png",
   },
   {
     title: "Brand Identity III",
@@ -66,7 +66,7 @@ const PROJECTS = [
       "An expressive branding project with strong visual personality. Colour, form, and typography work together to tell a compelling story that resonates with the target audience.",
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Visual Strategy"],
     bgClass: "branding-3",
-    image: "/img/b3.png",
+    image: "img/b3.png",
   },
   // Gallery III — Flyer Room (indices 6-8)
   {
@@ -76,7 +76,7 @@ const PROJECTS = [
       "A high-impact event flyer designed to stop the scroll. Bold typography, vibrant composition, and clear hierarchy drive attention to the key message and call to action.",
     tools: ["Adobe Photoshop", "Canva Pro", "Typography"],
     bgClass: "poster-1",
-    image: "/img/fl1.png",
+    image: "img/fl1.png",
   },
   {
     title: "Event Flyer II",
@@ -85,7 +85,7 @@ const PROJECTS = [
       "A promotional flyer crafted for maximum visual impact across digital and print channels. The layout balances aesthetic appeal with functional clarity to drive engagement.",
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Print Design"],
     bgClass: "poster-2",
-    image: "/img/fl2.png",
+    image: "img/fl2.png",
   },
   {
     title: "Event Flyer III",
@@ -94,7 +94,7 @@ const PROJECTS = [
       "A creative flyer design with a strong conceptual direction. The visual language communicates the mood and energy of the event before a single word is read.",
     tools: ["Canva Pro", "Adobe Photoshop", "Content Design"],
     bgClass: "poster-3",
-    image: "/img/fl3.png",
+    image: "img/fl3.png",
   },
   // Gallery IV — Publications Room (indices 9-11)
   {
@@ -104,7 +104,7 @@ const PROJECTS = [
       "A book cover design that commands attention on the shelf. The composition, colour, and typography work together to communicate the tone and genre before the reader opens a single page.",
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Publication Design"],
     bgClass: "creative-1",
-    image: "/img/c1.png",
+    image: "img/c1.png",
   },
   {
     title: "Book Cover II",
@@ -113,7 +113,7 @@ const PROJECTS = [
       "A refined cover design with strong conceptual underpinning. Every element — image, type, layout — was considered in relation to the story within, creating an irresistible first impression.",
     tools: ["Adobe Photoshop", "Typography", "Art Direction"],
     bgClass: "creative-2",
-    image: "/img/c2.png",
+    image: "img/c2.png",
   },
   {
     title: "Book Cover III",
@@ -122,7 +122,7 @@ const PROJECTS = [
       "An editorial cover that merges striking visual storytelling with purposeful design. The result is a cover that feels both artistic and commercially compelling.",
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Editorial Design"],
     bgClass: "creative-3",
-    image: "/img/c3.png",
+    image: "img/c3.png",
   },
 ];
 
@@ -132,9 +132,9 @@ const PROJECTS = [
    ================================================ */
 const GALLERY_ALL = [
   // Logos
-  { src: "/img/l1.png",    category: "branding",      label: "Logo Design" },
-  { src: "/img/l2.png",    category: "branding",      label: "Logo Design" },
-  { src: "/img/l3.png",    category: "branding",      label: "Logo Design" },
+  { src: "img/l1.png",    category: "branding",      label: "Logo Design" },
+  { src: "img/l2.png",    category: "branding",      label: "Logo Design" },
+  { src: "img/l3.png",    category: "branding",      label: "Logo Design" },
   { src: "/img/l4.png",    category: "branding",      label: "Logo Design" },
   { src: "/img/l5.png",    category: "branding",      label: "Logo Design" },
   { src: "/img/l6.png",    category: "branding",      label: "Logo Design" },
